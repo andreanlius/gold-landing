@@ -1,0 +1,52 @@
+---
+import { TrendingUp, Smartphone, Mail } from 'lucide-react';
+
+const WHATSAPP_LINK = "https://wa.me/62895612344661?text=Halo%20GoldThrusher,%20saya%20tertarik%20untuk%20menggunakan%20bot%20trading%20emas%20MT5.";
+---
+
+<footer class="py-32 border-t border-gray-100 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid md:grid-cols-4 gap-20 mb-28">
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center gap-3 mb-10 group cursor-pointer">
+          <div class="w-12 h-12 bg-[#D4AF37] rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-[15deg] transition-transform">
+            <TrendingUp className="text-white w-7 h-7" />
+          </div>
+          <span class="font-black text-3xl tracking-tight uppercase text-[#1A1A1A]">GOLD<span class="text-[#D4AF37]">THRUSHER</span></span>
+        </div>
+        <p class="text-gray-400 max-w-sm leading-relaxed mb-10 font-bold text-lg">Teknologi trading masa depan khusus MetaTrader 5 untuk hasil yang stabil di pasar emas global.</p>
+        <div class="flex gap-6">
+          <div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center hover:bg-[#D4AF37] hover:text-white transition-all cursor-pointer group shadow-sm">
+            <Smartphone className="w-6 h-6" />
+          </div>
+          <div class="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center hover:bg-[#D4AF37] hover:text-white transition-all cursor-pointer group shadow-sm">
+            <Mail className="w-6 h-6" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-black text-[11px] uppercase tracking-[0.5em] mb-10 text-gray-300">Navigation</h4>
+        <ul class="space-y-6 text-base font-black">
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2 group"><div class="w-1.5 h-1.5 bg-[#D4AF37] scale-0 group-hover:scale-100 transition-transform"></div> BERANDA</a></li>
+          <li><a href="#features" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2 group"><div class="w-1.5 h-1.5 bg-[#D4AF37] scale-0 group-hover:scale-100 transition-transform"></div> PRODUK</a></li>
+          <li><a href="#results" class="hover:text-[#D4AF37] transition-colors flex items-center gap-2 group"><div class="w-1.5 h-1.5 bg-[#D4AF37] scale-0 group-hover:scale-100 transition-transform"></div> PERFORMANCE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black text-[11px] uppercase tracking-[0.5em] mb-10 text-gray-300">Support</h4>
+        <ul class="space-y-6 text-base font-black">
+          <li><a href="#faq" class="hover:text-[#D4AF37] transition-colors">PUSAT BANTUAN</a></li>
+          <li><a href={WHATSAPP_LINK} class="text-[#D4AF37] hover:underline underline-offset-8 transition-all">WHATSAPP CS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-16 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-10 text-[11px] font-black text-gray-300 tracking-[0.5em] uppercase">
+      <p>© 2024 GOLDTHRUSHER ALGORITHM INC.</p>
+      <div class="flex gap-12 font-black">
+        <span class="hover:text-[#D4AF37] transition-colors cursor-default">SECURE PAYMENT</span>
+        <span class="hover:text-[#D4AF37] transition-colors cursor-default">256-BIT SSL</span>
+        <span class="hover:text-[#D4AF37] transition-colors cursor-default">MT5 EXECUTION</span>
+      </div>
+    </div>
+  </div>
+</footer>

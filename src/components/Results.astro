@@ -1,0 +1,67 @@
+---
+import { Reveal } from './Reveal';
+---
+
+<section id="results" class="py-32 lg:py-64 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-28">
+      <div class="lg:w-1/2">
+        <Reveal direction="left" client:visible>
+          <div class="inline-block px-5 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] font-black text-[10px] uppercase tracking-[0.3em] mb-8">Transparency First</div>
+          <h2 class="text-5xl lg:text-8xl font-black mb-12 tracking-tighter uppercase leading-[0.9] text-[#1A1A1A]">Bukti Hasil <br/>Trading Real.</h2>
+          <p class="text-xl text-gray-500 mb-14 leading-relaxed font-bold">
+            Bukan simulasi, bukan demo. Lihat performa nyata dari terminal MetaTrader 5 kami dengan konsistensi profit harian.
+          </p>
+          <div class="grid grid-cols-2 gap-10">
+            <div class="border-l-8 border-[#D4AF37] pl-8 py-3 group cursor-default">
+              <p class="text-5xl font-black mb-2 transition-transform group-hover:translate-x-2">12.4%</p>
+              <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Max Drawdown</p>
+            </div>
+            <div class="border-l-8 border-black pl-8 py-3 group cursor-default">
+              <p class="text-5xl font-black mb-2 transition-transform group-hover:translate-x-2">1.84</p>
+              <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Profit Factor</p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+      <Reveal className="lg:w-1/2 w-full" direction="right" delay={300} client:visible>
+        <div class="relative group">
+          <div class="absolute inset-0 bg-[#D4AF37]/20 blur-[120px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-[2s]"></div>
+          <div class="relative bg-[#0F0F0F] p-4 rounded-[60px] shadow-2xl overflow-hidden transform group-hover:rotate-[-2deg] group-hover:scale-[1.02] transition-all duration-700">
+            <div class="relative aspect-[4/5] bg-[#1A1A1A] rounded-[45px] overflow-hidden flex flex-col border border-white/5">
+              <div class="p-6 border-b border-white/5 flex justify-between items-center bg-black/40 backdrop-blur-md">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-[#D4AF37] rounded-full flex items-center justify-center font-bold text-white text-xs">GT</div>
+                  <span class="text-white font-black text-sm uppercase tracking-widest">History MT5</span>
+                </div>
+                <div class="flex gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                  <span class="text-[10px] text-gray-500 font-bold uppercase">Live</span>
+                </div>
+              </div>
+              <div class="flex-grow p-8 space-y-5">
+                {[1,2,3,4,5].map(i => (
+                  <div class="flex justify-between items-center border-b border-white/5 pb-4 opacity-0 animate-in fade-in slide-in-from-right duration-700 fill-mode-forwards" style={`animation-delay: ${i * 200 + 1000}ms`}>
+                    <div class="flex flex-col gap-1">
+                      <span class="text-white text-base font-black tracking-tight">XAUUSD <span class="text-[#D4AF37] text-xs ml-1">buy 0.10</span></span>
+                      <span class="text-gray-500 text-[10px] font-bold">2023.12.2{i} 14:32:1{i}</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+                      <span class="text-[#27C93F] font-black text-lg">+$42.{i}0</span>
+                      <span class="text-gray-500 text-[10px] font-bold uppercase">Profit</span>
+                    </div>
+                  </div>
+                ))}
+                <div class="mt-10 p-6 bg-[#D4AF37]/10 rounded-[30px] border border-[#D4AF37]/20 relative overflow-hidden group/profit">
+                  <div class="absolute top-0 left-0 w-full h-full bg-white/5 translate-x-[-100%] group-hover/profit:translate-x-[100%] transition-transform duration-[1.5s]"></div>
+                  <p class="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.3em] mb-2">Accumulated Net Profit</p>
+                  <p class="text-white text-4xl font-black tracking-tighter">$2,450.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </div>
+</section>

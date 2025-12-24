@@ -1,0 +1,46 @@
+---
+import { ShieldCheck, Zap, BarChart3 } from 'lucide-react';
+import { Reveal } from './Reveal';
+
+const features = [
+  {
+    title: "Low Drawdown",
+    desc: "Algoritma kami mengutamakan keamanan modal. Dengan maksimal DD di bawah 15%, pertumbuhan akun Anda tetap terjaga.",
+    Icon: ShieldCheck
+  },
+  {
+    title: "Fully Automated",
+    desc: "Sistem cerdas yang menganalisis pasar 24/5. Bot mengeksekusi peluang emas (XAUUSD) secara instan tanpa emosi manusia.",
+    Icon: Zap
+  },
+  {
+    title: "Real-time Analytics",
+    desc: "Integrasi penuh ke aplikasi smartphone. Pantau setiap posisi, profit, dan equity Anda secara transparan detik demi detik.",
+    Icon: BarChart3
+  }
+];
+---
+
+<section id="features" class="py-32 lg:py-56 bg-[#F9F9F9] rounded-[80px] mx-4 lg:mx-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Reveal className="text-center mb-28" client:visible>
+      <h2 class="text-4xl lg:text-7xl font-black mb-8 uppercase tracking-tighter text-[#1A1A1A]">Teknologi <span class="text-[#D4AF37]">Autopilot</span></h2>
+      <p class="text-xl text-gray-500 max-w-2xl mx-auto font-bold leading-relaxed">Dirancang untuk stabilitas jangka panjang dengan proteksi modal tercanggih.</p>
+    </Reveal>
+    
+    <div class="grid md:grid-cols-3 gap-10">
+      {features.map((feature, idx) => (
+        <Reveal key={idx} delay={idx * 200} className="relative z-10 hover:z-20 h-full" client:visible>
+          <div class="group smooth-hover p-12 rounded-[60px] bg-white border border-transparent hover:border-[#D4AF37]/30 hover:shadow-[0_50px_100px_-30px_rgba(0,0,0,0.1)] hover:-translate-y-4 h-full flex flex-col items-center text-center">
+            <div class="w-24 h-24 bg-gray-50 rounded-[35px] flex items-center justify-center mb-12 shadow-inner group-hover:bg-[#D4AF37] group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-700 text-[#D4AF37] group-hover:text-white">
+              <feature.Icon className="w-8 h-8" />
+            </div>
+            <h3 class="text-2xl font-black mb-6 tracking-tight uppercase group-hover:text-[#D4AF37] transition-colors">{feature.title}</h3>
+            <p class="text-gray-500 leading-relaxed mb-10 font-bold flex-grow">{feature.desc}</p>
+            <div class="h-1.5 bg-[#D4AF37]/10 w-16 group-hover:w-full rounded-full transition-all duration-700"></div>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "GoldThrusher - Bot Trading Emas MT5 Otomatis", 
+  description = "Algoritma GoldThrusher dirancang khusus untuk MetaTrader 5. Mengeksploitasi volatilitas XAUUSD secara autopilot 24/5." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-[Arial,sans-serif] text-[#1A1A1A] bg-white selection:bg-[#D4AF37]/30 overflow-x-hidden">
+    <slot />
+  </body>
+</html>

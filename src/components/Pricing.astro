@@ -1,0 +1,69 @@
+---
+import { CheckCircle2, ShieldCheck } from 'lucide-react';
+import { Reveal } from './Reveal';
+
+const WHATSAPP_LINK = "https://wa.me/62895612344661?text=Halo%20GoldThrusher,%20saya%20tertarik%20untuk%20menggunakan%20bot%20trading%20emas%20MT5.";
+
+const features = [
+  "Lisensi 1 Akun Trading MetaTrader 5",
+  "Update Algoritma GoldThrusher Selamanya",
+  "Panduan Setup & Instalasi MT5",
+  "Support Prioritas 24/7 Langsung",
+  "Akses Grup Komunitas Eksklusif"
+];
+---
+
+<section id="pricing" class="py-32 lg:py-64 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Reveal className="text-center mb-24" client:visible>
+      <h2 class="text-5xl lg:text-7xl font-black mb-8 uppercase tracking-tighter text-[#1A1A1A]">Penawaran <span class="text-[#D4AF37]">Eksklusif.</span></h2>
+      <p class="text-gray-500 font-bold uppercase tracking-widest text-sm leading-relaxed">Dapatkan lisensi permanen hari ini sebelum harga naik.</p>
+    </Reveal>
+
+    <div class="max-w-xl mx-auto">
+      <Reveal delay={200} direction="zoom" client:visible>
+        <div class="relative h-full flex flex-col bg-white rounded-[70px] p-12 lg:p-20 smooth-hover group ring-[10px] ring-[#D4AF37]/10 hover:ring-[#D4AF37]/30 shadow-[0_80px_150px_-30px_rgba(0,0,0,0.1)] hover:scale-[1.03]">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#D4AF37] text-white px-12 py-5 rounded-full text-sm font-black uppercase tracking-[0.4em] shadow-[0_20px_40px_rgba(212,175,55,0.4)] whitespace-nowrap">
+            LIFETIME ACCESS
+          </div>
+          
+          <div class="text-center mb-16">
+            <h3 class="text-xs font-black mb-8 uppercase tracking-[0.6em] text-[#D4AF37]">PREMIUM LICENSE</h3>
+            <div class="flex flex-col items-center gap-2">
+              <div class="flex items-baseline gap-3">
+                <span class="text-8xl lg:text-9xl font-black tracking-tighter text-[#1A1A1A]">$200</span>
+                <span class="text-gray-400 text-xl font-black">/ONLY</span>
+              </div>
+              <p class="text-[10px] font-black text-gray-300 line-through tracking-[0.5em] mt-4 uppercase">VALUE PRICE: $999</p>
+            </div>
+          </div>
+
+          <ul class="space-y-8 mb-20">
+            {features.map((feature, i) => (
+              <li class="flex items-start gap-5 text-gray-600 group/item">
+                <div class="w-7 h-7 rounded-full bg-[#D4AF37]/10 flex items-center justify-center shrink-0 group-hover/item:bg-[#D4AF37] transition-all duration-500">
+                  <CheckCircle2 className="w-4 h-4 text-[#D4AF37] group-hover/item:text-white transition-colors" />
+                </div>
+                <span class="text-lg font-bold leading-relaxed">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a 
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-shine w-full py-8 rounded-[40px] bg-[#1A1A1A] text-white font-black text-xl uppercase tracking-[0.3em] transition-all transform active:scale-95 shadow-2xl hover:bg-[#D4AF37] hover:shadow-[#D4AF37]/40 text-center block"
+          >
+            AMBIL LISENSI
+          </a>
+          
+          <div class="mt-10 flex items-center justify-center gap-4 text-gray-300">
+            <ShieldCheck className="w-5 h-5" />
+            <span class="text-[10px] font-black uppercase tracking-[0.4em]">Secure Lifetime License</span>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </div>
+</section>
